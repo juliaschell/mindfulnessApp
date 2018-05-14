@@ -1,8 +1,8 @@
-# mindfulnessApp
+# Wellness\ App
 
 iOS application -- Swift + Xcode9 
 
-Wellness application to: 
+Wellness mobile application to: 
 1. Get a wellness activity 
 2. Record gratitude and excitement logs (logging these things has proven positive neurological effects) 
 
