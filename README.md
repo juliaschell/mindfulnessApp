@@ -1,4 +1,4 @@
-# Wellness\ App
+# Wellness App
 
 iOS application -- Swift + Xcode9 
 
