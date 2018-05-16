@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -28,7 +27,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="205.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="eBo-IB-4P4">
+                                        <stackView autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="eBo-IB-4P4">
                                             <rect key="frame" x="16" y="11" width="343" height="184"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gratitude Log" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xsd-TG-BHH">
@@ -110,7 +109,7 @@
                             <outlet property="delegate" destination="VQ5-JS-orW" id="8AJ-23-bth"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Log" id="E3r-VV-S3K"/>
+                    <tabBarItem key="tabBarItem" title="Log" image="Pencil" id="E3r-VV-S3K"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3pz-VB-WbY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -124,21 +123,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Daily Exercise" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yuf-8E-fPI">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Daily Exercise" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yuf-8E-fPI">
                                 <rect key="frame" x="16" y="216" width="343" height="236"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="Yuf-8E-fPI" secondAttribute="height" multiplier="343:236" id="r9b-ki-giy"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JZA-K5-n7a">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JZA-K5-n7a">
                                 <rect key="frame" x="16" y="146" width="343" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="JZA-K5-n7a" secondAttribute="height" multiplier="343:40" id="82y-92-7ya"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <state key="normal" title="Tap to Reveal">
                                     <color key="titleColor" patternImage="button:JZA-K5-n7a:patternImage" colorSpace="pattern"/>
@@ -147,11 +142,9 @@
                                     <action selector="revealDailyExercise:" destination="hFs-Du-wjK" eventType="touchUpInside" id="Mim-qX-Q0y"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Today's Wellness Exercise" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jEQ-YV-upE">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Today's Wellness Exercise" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jEQ-YV-upE">
                                 <rect key="frame" x="16" y="102" width="343" height="36"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="jEQ-YV-upE" secondAttribute="height" multiplier="335:36" id="P1j-Li-wzD"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -160,26 +153,72 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="hW3-xH-fbQ"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" image="second" id="OF6-zR-dPI"/>
+                    <tabBarItem key="tabBarItem" title="Wellness" image="Flower" id="OF6-zR-dPI"/>
                     <connections>
                         <outlet property="newExerciseDescription" destination="Yuf-8E-fPI" id="sMB-FC-Ofq"/>
+                        <outlet property="revealButton" destination="JZA-K5-n7a" id="65V-Ns-JAZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eV3-0J-KEI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1432.8" y="-0.44977511244377816"/>
         </scene>
-        <!--Item-->
+        <!--Tracker-->
         <scene sceneID="173-3b-KBB">
             <objects>
-                <viewController id="s1b-RS-4MX" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="YE6-ci-7VD">
+                <viewController title="Tracker" id="s1b-RS-4MX" customClass="TrackerTableViewController" customModule="Mindful_Log" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="105" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="EUd-DY-Y21">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="63d-Cu-HRw"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="Qp0-Ph-MnL"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationWidth="1" shouldIndentWhileEditing="NO" reuseIdentifier="TrackerTableViewCell" rowHeight="105" id="7oi-Cx-Jrt" customClass="TrackerTableViewCell" customModule="Mindful_Log" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="105"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7oi-Cx-Jrt" id="svR-WR-YmK">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="104.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tracker" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WY5-aX-6m1">
+                                            <rect key="frame" x="159" y="11" width="57.5" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="Sps-eL-Qgo">
+                                            <rect key="frame" x="8" y="19" width="359" height="65.5"/>
+                                            <color key="minimumTrackTintColor" red="0.18764378030000001" green="0.2572857858" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="maximumTrackTintColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
+                                        </slider>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UIQ-G3-qkR">
+                                            <rect key="frame" x="163" y="64" width="49" height="30"/>
+                                            <state key="normal" title="Submit"/>
+                                            <connections>
+                                                <action selector="SubmitTrackerButton:" destination="7oi-Cx-Jrt" eventType="touchUpInside" id="hRs-Fz-fXt"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="WY5-aX-6m1" firstAttribute="centerX" secondItem="svR-WR-YmK" secondAttribute="centerX" id="8ld-uK-AAM"/>
+                                        <constraint firstItem="UIQ-G3-qkR" firstAttribute="centerX" secondItem="svR-WR-YmK" secondAttribute="centerX" id="Knn-wa-9SJ"/>
+                                        <constraint firstItem="Sps-eL-Qgo" firstAttribute="top" secondItem="svR-WR-YmK" secondAttribute="top" constant="19" id="L0b-IO-3FZ"/>
+                                        <constraint firstAttribute="bottom" secondItem="Sps-eL-Qgo" secondAttribute="bottom" constant="21" id="QpB-tC-whh"/>
+                                        <constraint firstItem="UIQ-G3-qkR" firstAttribute="top" secondItem="WY5-aX-6m1" secondAttribute="bottom" constant="32.5" id="SXd-cM-rJB"/>
+                                        <constraint firstItem="UIQ-G3-qkR" firstAttribute="bottom" secondItem="svR-WR-YmK" secondAttribute="bottomMargin" id="TFd-2R-jio"/>
+                                        <constraint firstItem="UIQ-G3-qkR" firstAttribute="top" secondItem="WY5-aX-6m1" secondAttribute="bottom" constant="32.5" id="bwd-zY-JVa"/>
+                                        <constraint firstAttribute="trailing" secondItem="Sps-eL-Qgo" secondAttribute="trailing" constant="10" id="sZ3-RU-AXV"/>
+                                        <constraint firstItem="WY5-aX-6m1" firstAttribute="top" secondItem="svR-WR-YmK" secondAttribute="topMargin" id="wGA-Bq-5GX"/>
+                                        <constraint firstItem="Sps-eL-Qgo" firstAttribute="leading" secondItem="svR-WR-YmK" secondAttribute="leading" constant="10" id="xvz-m1-q31"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="TrackerSlider" destination="Sps-eL-Qgo" id="BuM-UJ-D5r"/>
+                                    <outlet property="TrackerTitle" destination="WY5-aX-6m1" id="fIf-xO-rcR"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Trackers" image="BarGraph" id="Qp0-Ph-MnL"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gT5-cW-zxM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -206,6 +245,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="BarGraph" width="30" height="30"/>
+        <image name="Flower" width="30" height="30"/>
+        <image name="Pencil" width="30" height="30"/>
         <image name="button:JZA-K5-n7a:patternImage" width="512" height="512">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPT5YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
@@ -17756,6 +17798,5 @@ ABAOvgAQDsYAEA7TABAO2AAQDtoAEA7cABAO4QAQDukAEA7sABAO8QAQDvkAEA78ABAPDgAQDxEAEA8W
 AAAAAAAABAEAAAAAAAAAQQAAAAAAAAAAAAAAAAAQDxg
 </mutableData>
         </image>
-        <image name="second" width="30" height="30"/>
     </resources>
 </document>

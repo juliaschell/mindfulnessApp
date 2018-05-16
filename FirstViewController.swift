@@ -11,6 +11,10 @@ import UIKit
 class FirstViewController: UIViewController {
 
     @IBOutlet var newExerciseDescription: UILabel!
+    @IBOutlet weak var revealButton: UIButton!
+    
+    
+    
     //store wellness exercises -- consider hashtable or set?
     var exerciseList = ["Body awareness", "Controlled breathing", "Stretching", "Exercise"]
     
